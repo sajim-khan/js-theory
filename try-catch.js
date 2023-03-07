@@ -1,15 +1,14 @@
 function checkAge(){
     const searchField = document.getElementById('age')
-    const text = searchField.value
+    const text = searchField.value;
     const errorTag = document.getElementById('error')
-    errorTag.innerHTML = ''
     try{
        const age = parseInt(text)
        if(isNaN(age)){
             throw "please enter a number"
        }
        else if (age<18){
-            console.log('Children not allow');
+            throw('Children not allow');
        }
        errorTag.innerHTML = ''
     }
@@ -22,5 +21,5 @@ function checkAge(){
         console.log('catching all done');
     }
 }
-checkAge()
+//checkAge()
 
